@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1053164754558",
+    "firebase_url": "https://beamsapi.firebaseio.com",
+    "project_id": "beamsapi",
+    "storage_bucket": "beamsapi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053164754558:android:c5dd26994cf92a7d",
+        "android_client_info": {
+          "package_name": "com.example.beamsapidemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053164754558-2msf35kqsvkb2fe29o7h2gbnt5s68gvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqUm3yU_xgpC_CWJRn-ohE91NeGPBdiWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053164754558-2msf35kqsvkb2fe29o7h2gbnt5s68gvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

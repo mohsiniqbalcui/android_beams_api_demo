@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Beams API demo</string>
+    <string name="title_activity_another">Another Activity</string>
+</resources>
