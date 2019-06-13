@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSetInterestsButtonClick(view: View) {
-        showMultiChoiceDialog(DialogRequestType.SET_INTERESTS)
+        showMultiChoiceDialog()
     }
 
     private fun onReturnFromUserSelectedSetInterests(interests: Set<String>) {
@@ -184,24 +184,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSingleChoiceDialog(requestType: DialogRequestType) {
-
-        // setup the alert builder
         val builder = AlertDialog.Builder(this)
         if (requestType == DialogRequestType.ADD_INTEREST) {
             builder.setTitle("Select interest to add")
         } else {
             builder.setTitle("Select interest to remove")
         }
-
-        // add a checkbox list
         val interests = arrayOf("apple", "pear", "orange", "banana")
         var chosenInterest = ""
-        builder.setSingleChoiceItems(interests, -1) { dialog, which ->
+        builder.setSingleChoiceItems(interests, -1) { _, which ->
             chosenInterest = interests[which]
         }
-
-        // add OK and Cancel buttons
-        builder.setPositiveButton("OK") { dialog, which ->
+        builder.setPositiveButton("OK") { _, _ ->
             if (requestType == DialogRequestType.ADD_INTEREST) {
                 onReturnFromUserSelectedAddInterest(chosenInterest)
             } else {
@@ -209,28 +203,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
         builder.setNegativeButton("Cancel", null)
-
-        // create and show the alert dialog
         val dialog = builder.create()
         dialog.show()
     }
 
-    private fun showMultiChoiceDialog(requestType: DialogRequestType) {
-
-        // setup the alert builder
+    private fun showMultiChoiceDialog() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Select your interests")
-
-        // add a checkbox list
         val interests = arrayOf("apple", "pear", "orange", "banana")
         val checkedItems = booleanArrayOf(false, false, false, false, false)
-        builder.setMultiChoiceItems(interests, checkedItems) { dialog, which, isChecked ->
-            // user checked or unchecked a box
+        builder.setMultiChoiceItems(interests, checkedItems) { _, which, isChecked ->
             checkedItems[which] = isChecked
         }
-
-        // add OK and Cancel buttons
-        builder.setPositiveButton("OK") { dialog, which ->
+        builder.setPositiveButton("OK") { _, _ ->
             val chosenInterests = ArrayList<String>()
             for (i in interests.indices) {
                 if (checkedItems[i]) {
@@ -240,8 +225,6 @@ class MainActivity : AppCompatActivity() {
             onReturnFromUserSelectedSetInterests(chosenInterests.toSet())
         }
         builder.setNegativeButton("Cancel", null)
-
-        // create and show the alert dialog
         val dialog = builder.create()
         dialog.show()
     }
