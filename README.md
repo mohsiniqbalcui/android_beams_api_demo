@@ -6,11 +6,10 @@ This is a supplemental project for the article [Pusher Beams client API demo for
 
 ## Setup
 
-To test out this demo, you can follow these steps:
+To set up this demo app, perform the following tasks:
 
-1. Create a new Android Kotlin app using AndroidX and call the package `com.example.beamsapidemo`.
-2. Follow the [Getting Started](https://pusher.com/docs/beams/getting-started/android/configure-fcm) documentation on Pusher Beams to add basic beams support to your app.
-3. Replace key files in your app with files from this repo (`MainActivity`, `AndroidManifest`, and so on)
-4. Be sure to use your own Beams instance ID
-
-Alternatively, you could clone this project and then replace the Beams instance ID and `google-services.json` file with your own.
+1. Clone the GitHub repo
+2. [Create a Beams instance and configure FCM](https://pusher.com/docs/beams/getting-started/android/configure-fcm). You can follow the quick start guide. The Android package name is `com.example.beamsapidemo`. Enter the FCM Server Key and download the `google-service.json` file. At that point you can quit the quick start wizard. Go to your [Beams dashboard](https://dash.pusher.com/beams), open your new instance, and go to the Credentials tab. You will find your Instance ID and Secret Key there.
+3. In the cloned repo, replace `app/google-services.json` with the one you downloaded from the FCM setup.
+4. In the cloned repo’s `MainActivity.kt` file, set the `INSTANCE_ID` constant to your Instance ID.
+5. Run the app on the Android emulator.
