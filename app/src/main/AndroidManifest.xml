@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- using clear text traffic -->
+    <!-- I set `usesCleartextTraffic` to true. This is so that we can connect to
+    a server running on our local machine for testing purposes. It should be false
+    for a production app since your server will be using an https:// scheme. -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +27,8 @@
         </activity>
         <activity android:name=".AnotherActivity"></activity>
 
-        <!-- provide default notification icon -->
+        <!-- Provide a default push notification icon.
+        This is to prevent the bug described here: https://stackoverflow.com/q/56483562 -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_default_notification" />

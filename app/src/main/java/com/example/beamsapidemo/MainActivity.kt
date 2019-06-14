@@ -31,8 +31,11 @@ class MainActivity : AppCompatActivity() {
     // SDK
 
     companion object {
-        // replace this with your Beams instance ID
-        const val INSTANCE_ID = "afc7aaf1-3018-4709-adf8-e779bcd48551"
+        // Replace MyConfig.INSTANCE_ID with your Beams instance ID.
+        // You can get this ID from the Beams dashboard: https://dash.pusher.com/beams
+        // Example:
+        // const val INSTANCE_ID = "111111111-22222-3333-aaaa-66666666666"
+        const val INSTANCE_ID = MyConfig.INSTANCE_ID
     }
 
     fun onStartButtonClick(view: View) {
