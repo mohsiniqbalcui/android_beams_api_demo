@@ -2,7 +2,7 @@
 
 Demonstration of the Pusher Beams client SDK for Android
 
-This is a supplemental project for the article [Pusher Beams client API demo for Android](TODO).
+This is a supplemental project for the article [Pusher Beams client API demo for Android](https://pusher.com/tutorials/beams-api-demo-android).
 
 ## Setup
 
